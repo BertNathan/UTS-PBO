@@ -7,12 +7,11 @@ class Cuti {
     ajukanCuti(daysRequested) {
         if (daysRequested > this.kuota) {
             return `Kuota anda tidak cukup untuk mengajukan cuti ini.`;
-        }
-        this.kuota -= daysRequested;
+        } else {
         return `Pengajuan cuti ${daysRequested} hari disetujui untuk ${this.nama}. Sisa kuota: ${this.kuota} hari.`;
     }
 }
-
+}
 class CutiTahunan extends Cuti {
     constructor(nama) {
         super(nama, 12); 
