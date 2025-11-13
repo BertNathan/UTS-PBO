@@ -8,6 +8,7 @@ class Cuti {
         if (daysRequested > this.kuota) {
             return `Kuota anda tidak cukup untuk mengajukan cuti ini.`;
         } else {
+            this.kuota -= daysRequested;
         return `Pengajuan cuti ${daysRequested} hari disetujui untuk ${this.nama}. Sisa kuota: ${this.kuota} hari.`;
     }
 }
